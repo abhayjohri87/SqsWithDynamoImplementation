@@ -1,0 +1,35 @@
+# Service registers under this name
+# Control the InternalResourceViewResolver:
+spring:
+  application:
+    name: employee-web-zuul
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+# HTTP Server (Tomcat) Port
+server: 
+  port: 8088
+
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled:  false
+
+iam:
+ user: false    
+    
+sqs:
+  regionname: us-west-2
+  endpoint: https://sqs.us-west-2.amazonaws.com/98
+  queuename: TEMP
+  consumer:
+     delay: 2000
+     
+     
+dynamodb:
+ accesskey: Aceesskey
+ secretkey: SecretKey
+ regionname: us-west-2
